@@ -529,7 +529,7 @@ reuse_existing_tarball() {
 }
 
 download_tarball() {
-  local official_source="www.python.org/ftp/python"
+  local official_source="registry.npmmirror.com/-/binary/python"
   if [ -n "$PYTHON_BUILD_MIRROR_URL_SKIP_CHECKSUM" ]; then
       local package_url="$(echo "$1" | sed -e "s|.*//${URL_BASE:-$official_source}|$PYTHON_BUILD_MIRROR_URL|g")"
   else
